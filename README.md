@@ -1,17 +1,25 @@
 # alessandro-sherhey-website
 
-These are the files for my personal website. Right now I'm preparing everything for the release of the **BETA v0.1** version of the website. This website
-still has some bugs to fix, hence the name "beta". I have to fix a few issues like:
+These are the files for my personal website. The website is currently in the **beta v0.2** version. Why *beta*? Because the website isn't fully ready yet: it has still some minor design issues and I'm sure it has some other small issues that I haven't discovered yet. In this **readme** I'll write every changelog, so be sure to check this repository if you're interested in the development of this website.
 
-### Adding alternative options to color gradients for those who don't use Safari
-I have some gradient text that looks really good with Safari. But to make these gradient text I had to use WebKit properties, which are supported only
-on Safari. That's why I'm planning to use some alternatives for those who are on other operating systems or just prefer using a different browser.
+### Upcoming features ###
 
-### Fixing attributions to icons8 for their icons
-I used some of their icons for their website, and I realized today that I have to give attribution for *every single icon*, not just for one. But that's
-okay.
+- **New email to contact me**: you'll be able to write me emails if you want to. With beta v0.3 I'll create a custom email address just for this website!
 
-### Other minor issues
-Issues that aren't worth explaining here, they're fixable in less than an hour.
 
-In this README I'll also write a roadmap for new features I want to add in this website. Hope you'll like the website as much as I do :)
+### Changelog beta v0.2
+
+**Bug fixes**
+- **Important:** Fixed issue #3 where background images paths weren't recognized by GitHub Pages, making the background not visible.
+- Fixed issue #1 where the HTML and CSS logos weren't optimized for dark mode.
+
+**Enhancements**
+- Headings in the *Projects* section are now white on hover, making the effect more visible.
+- Added custom fonts: *Inter* and *Montserrat*. 
+
+**Images**
+- Renamed images to make them easily identifiable.
+- Deleted images that weren't necessary anymore.
+
+**Website files**
+- Updated this README with a new changelog
