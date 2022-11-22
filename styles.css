@@ -590,7 +590,7 @@ footer a:active {
     }
 
     #profile {
-        background-image: url(assets/background_light.png);
+        background-image: url(assets/background_dark.png);
     }
     nav {
         background-color: rgba(20, 20, 20, 1);
