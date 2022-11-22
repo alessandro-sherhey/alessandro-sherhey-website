@@ -1,6 +1,6 @@
 /* General Rules */
 * {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Inter', 'Montserrat', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Montserrat', system-ui;
 }
 
 
@@ -590,7 +590,7 @@ footer a:active {
     }
 
     #profile {
-        background-image: url(assets/background_dark.png);
+        background-image: url(assets/background_light.png);
     }
     nav {
         background-color: rgba(20, 20, 20, 1);
