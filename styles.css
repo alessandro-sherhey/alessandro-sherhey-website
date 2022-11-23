@@ -203,6 +203,10 @@ nav span {
     text-align: center;
 }
 
+#projects h2 {
+    transition: 0.35s ease;
+}
+
 #projects h2:hover {
     font-size: 2.25rem;
     background: -webkit-linear-gradient(#017dde, #fe1ef1);
@@ -523,13 +527,28 @@ footer a:active {
 /* Margins reduced to waste less space */
 
 @media only screen and (max-width: 750px) {
+    #about {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
     #kcontainer {
         margin-left: 0;
         margin-right: 0;
     }
 
+    #projects {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
     #ccontainer div {
         margin-left: 0;
+    }
+
+    #bts {
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
     #bts div {
@@ -549,10 +568,7 @@ footer a:active {
     }
 }
 
-/* TEMPORARY: Project divs hide their images because they overflow from their container */
-
 @media only screen and (max-width: 600px) {
-
     #contact div {
         height: fit-content;
     }
