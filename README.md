@@ -2,12 +2,23 @@
 
 These are the files for my personal website. The website is currently in the **beta v0.2** version. Why *beta*? Because the website isn't fully ready yet: it has still some minor design issues and I'm sure it has some other small issues that I haven't discovered yet. In this **readme** I'll write every changelog, so be sure to check this repository if you're interested in the development of this website.
 
-### Upcoming features ###
+Link to the website: https://alessandro-sherhey.github.io/alessandro-sherhey-website/
 
-- **New email to contact me**: you'll be able to write me emails if you want to. With beta v0.3 I'll create a custom email address just for this website!
+## Upcoming features
 
+- Accessibility features with new media queries.
+- Domain for the website!
 
-### Changelog beta v0.2
+## Changelog beta v0.3
+
+**Bug fixes**
+- Fixed padding issue for mobile devices
+- Fixed one of the heading transitions
+
+**New features**
+- New email to contact me. You'll find it in the "Contact" section! :D
+
+## Changelog beta v0.2
 
 **Bug fixes**
 - **Important:** Fixed issue #3 where background images paths weren't recognized by GitHub Pages, making the background not visible.
