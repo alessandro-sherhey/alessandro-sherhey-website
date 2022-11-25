@@ -109,17 +109,11 @@ nav span {
 #profile h1:hover {
     font-size: 4.5rem;
     transition: 0.5s ease;
-
 }
 
 #profile p {
     color: rgba(255, 255, 255, 0.5);
     font-size: 1.5rem;
-    transition: 0.3s ease;
-}
-
-#profile p:hover {
-    color: rgba(255, 255, 255, 1);
     transition: 0.3s ease;
 }
 
@@ -135,13 +129,7 @@ nav span {
     transition: 0.35s ease;
 }
 
-#about h2:hover{
-    font-size: 2.25rem;
-    background: -webkit-linear-gradient(#017dde, #fe1ef1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: 0.35s ease;
-}
+
 
 /* Knowledge Rules */
 
@@ -152,14 +140,6 @@ nav span {
 }
 
 #knowledge h2 {
-    transition: 0.35s ease;
-}
-
-#knowledge h2:hover {
-    font-size: 2.25rem;
-    background: -webkit-linear-gradient(#017dde, #fe1ef1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     transition: 0.35s ease;
 }
 
@@ -207,13 +187,7 @@ nav span {
     transition: 0.35s ease;
 }
 
-#projects h2:hover {
-    font-size: 2.25rem;
-    background: -webkit-linear-gradient(#017dde, #fe1ef1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: 0.35s ease;
-}
+
 
 #projects img {
     width: 300px;
@@ -258,10 +232,6 @@ nav span {
     transition: 0.2s ease;
 }
 
-#pcontainer div div h3:hover {
-    font-size: 1.75rem;
-}
-
 #projects a {
     color: black;
     transition: 0.2s ease;
@@ -288,14 +258,6 @@ nav span {
     transition: 0.35s ease;
 }
 
-#contact h2:hover {
-    font-size: 2.25rem;
-    background: -webkit-linear-gradient(#017dde, #fe1ef1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: 0.35s ease;
-}
-
 #ccontainer {
     display: flex;
     flex-direction: row;
@@ -311,12 +273,6 @@ nav span {
     transition: 0.35s ease;
 }
 
-#ccontainer img:hover {
-    scale: 0.7;
-    opacity: 1;
-    transition: 0.35s ease;
-}
-
 #ccontainer div {
     display: flex;
     flex-direction: row;
@@ -328,6 +284,7 @@ nav span {
 
 #ccontainer div p {
     padding-left: 20px;
+    width: 100%;
 }
 
 #ccontainer div a {
@@ -343,6 +300,10 @@ nav span {
 #ccontainer div a:active {
     color: #fe1ef1;
     transition: 0.2s ease;
+}
+
+.onlymobile {
+    display: none;
 }
 
 
@@ -362,14 +323,6 @@ nav span {
     transition: 0.35s ease;
 }
 
-#bts h2:hover {
-    font-size: 2.25rem;
-    background: -webkit-linear-gradient(#017dde, #fe1ef1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: 0.35s ease;
-}
-
 #bts div {
     display: flex;
     align-items: center;
@@ -385,12 +338,6 @@ nav span {
     margin: 0 20px;
     border-radius: 20px;
     transition: 0.35s ease;
-}
-
-#bts img:hover {
-    scale: 1.025;
-    transition: 0.35s ease;
-    box-shadow: 0px 5px rgba(0, 125, 222, 0.7);
 }
 
 #bts div a {
@@ -462,7 +409,6 @@ footer a:active {
 /* Project divs get stacked vertically instead of horizontally */
 
 @media only screen and (max-width: 950px) {
-
     #pcontainer {
         margin-right: 0;
         flex-direction: column;
@@ -569,13 +515,23 @@ footer a:active {
 }
 
 @media only screen and (max-width: 600px) {
-    #contact div {
-        height: fit-content;
+    #profile {
+        background-size: cover;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .onlydesktop {
+        display: none;
+    }
+
+    .onlymobile {
+        display: block;
     }
 }
 
 @media only screen and (max-width: 450px) {
-    #pcontainer div{
+    #pcontainer div {
         width: 90%;
     }
 
@@ -591,6 +547,16 @@ footer a:active {
         margin-top: 0;
     }
 } 
+
+@media only screen and (max-width: 375px) {
+    #profile h1 {
+        font-size: 3.25rem;
+    }
+
+    #profile h1:hover {
+        font-size: 3.25rem;
+    }
+}
 
 
 /* Dark Mode */
@@ -636,5 +602,77 @@ footer a:active {
 
     nav a, #projects a, #ccontainer div a, #bts div a, footer a {
         color: #ddd;
+    }
+}
+
+/* Enables almost all hover animations for pointer users */
+
+@media (pointer: fine) and (prefers-reduced-motion: no-preference) {
+
+    #profile p:hover {
+        color: rgba(255, 255, 255, 1);
+        transition: 0.3s ease;
+    }
+
+    #about h2:hover {
+        font-size: 2.25rem;
+        background: -webkit-linear-gradient(#017dde, #fe1ef1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: 0.35s ease;
+    }
+
+    #knowledge h2:hover {
+        font-size: 2.25rem;
+        background: -webkit-linear-gradient(#017dde, #fe1ef1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: 0.35s ease;
+    }
+
+    #projects h2:hover {
+        font-size: 2.25rem;
+        background: -webkit-linear-gradient(#017dde, #fe1ef1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: 0.35s ease;
+    }
+
+    #pcontainer div div h3:hover {
+        font-size: 1.75rem;
+    }
+
+    #contact h2:hover {
+        font-size: 2.25rem;
+        background: -webkit-linear-gradient(#017dde, #fe1ef1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: 0.35s ease;
+    }
+
+    #ccontainer img:hover {
+        scale: 0.7;
+        opacity: 1;
+        transition: 0.35s ease;
+    }
+
+    #bts h2:hover {
+        font-size: 2.25rem;
+        background: -webkit-linear-gradient(#017dde, #fe1ef1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: 0.35s ease;
+    }
+
+    #bts img:hover {
+        scale: 1.025;
+        transition: 0.35s ease;
+        box-shadow: none;
+    }
+}
+
+@media (inverted-colors: inverted) {
+    #kcontainer img, #pcontainer img {
+        filter: invert(1);
     }
 }
