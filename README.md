@@ -6,8 +6,17 @@ Link to the website: https://alessandro-sherhey.github.io/alessandro-sherhey-web
 
 ## Upcoming features
 
-- Accessibility features with new media queries.
 - Domain for the website!
+- New webpages!
+
+## Changelog beta v0.4
+
+**Bug fixes**
+- Fixed newly discovered bugs while developing this new version. They were mainly small UI bugs.
+
+**New features**
+- Removed some animations for users who enabled the "Reduce Motion" option on their device
+- Removed some animations for touchscreen users
 
 ## Changelog beta v0.3
 
