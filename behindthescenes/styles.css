@@ -1,0 +1,372 @@
+/* General Rules */
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Montserrat', system-ui;
+}
+
+
+html {
+    /* background-image: linear-gradient(to bottom right, #12c2e9, #c471ed, #f64f59); */
+    background-color: #eee;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p, a {
+    font-size: 1.2rem;
+}
+
+
+
+/* Navbar Rules */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 1;
+    flex-wrap: wrap;
+
+    height: 50px;
+    width: 100%;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    background-color: white;
+    transition: 0.35s ease;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    transition: 0.2s ease;
+    padding: 0 20px;
+}
+
+nav .active {
+    font-weight: bold;
+}
+
+nav .click:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+nav .click:active {
+    color: #017dde;
+}
+
+nav .special {
+    font-weight: bold;
+}
+
+nav .special:hover {
+    background: -webkit-linear-gradient(#017dde, #fe1ef1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.2s ease;
+}
+
+nav span {
+    background-color: red;
+    padding: 2px 5px;
+    margin: 0 5px;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+/* Header Rules */
+
+header {
+    margin-top: 70px;
+    text-align: center;
+}
+
+header h1 {
+    transition: 0.35s ease;
+}
+
+header p {
+    margin: 0 30px;
+    opacity: 0.8;
+}
+
+
+/* Tools Rules */
+#tools {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#tools h2 {
+    margin: 40px 0 15px 0;
+    transition: 0.35s ease;
+}
+
+#tools p {
+    margin: 0 30px 10px 30px;
+    opacity: 0.8;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#container div {
+    display: flex;
+    width: 45%;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+#container div h3 {
+    transition: 0.35s ease;
+}
+
+#container div div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+
+#container div img {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    border-radius: 20px;
+    transition: 0.35s ease;
+}
+
+/* Starting Rules */
+
+#starting, #colors, #remember, #time, #end {
+    display: flex;
+    flex-direction: column;
+}
+
+#starting h2, #colors h2, #remember h2, #time h2{
+    text-align: center;
+    margin: 40px 0 15px 0;
+    transition: 0.35s ease;
+}
+
+#end h2 {
+    text-align: center;
+    margin: 30px 30px;
+    transition: 0.35s ease;
+}
+
+#starting p, #colors p, #remember p, #time p {
+    margin: 0 30px 10px 30px;
+    opacity: 0.8;
+    text-align: center;
+}
+
+#starting img, #colors img, #remember img, #time img {
+    margin: 20px;
+    width: 75%;
+    max-width: 700px;
+    border-radius: 15px;
+    align-self: center;
+    transition: 0.35s ease;
+}
+
+#credits, #credits a {
+    font-size: 1rem;
+}
+
+#tools a, #credits a, #colors a, #remember a {
+    color: black;
+    transition: 0.2s ease;
+}
+
+#tools a:hover, #credits a:hover, #colors a:hover,
+#remember a:hover {
+    color: #017dde;
+    transition: 0.2s ease;
+}
+
+#tools a:active, #credits a:active, #colors a:active,
+#remember a:active {
+    color: #fe1ef1;
+    transition: 0.2s ease;
+}
+
+.light {
+    display: flex;
+}
+
+.dark {
+    display: none;
+}
+
+/* Footer Rules */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+footer p {
+    padding: 5px 10px;
+    margin: 0;
+}
+
+footer p, footer a {
+    font-size: 0.8rem;
+}
+
+.reducedopacity {
+    opacity: 0.6;
+}
+
+footer a {
+    color: black;
+    transition: 0.2s ease;
+}
+
+footer a:hover {
+    color: #017dde;
+    transition: 0.2s ease;
+}
+
+footer a:active {
+    color: #fe1ef1;
+    transition: 0.2s ease;
+}
+
+@media only screen and (max-width: 1215px) {
+    #container div {
+        width: 90%;
+        margin: 20px auto;
+    }
+}
+
+@media only screen and (max-width: 1006px) {
+    nav .hide2 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 632px) {
+    nav {
+        height: 100px;
+        padding: 20px auto;
+        position: static;
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    #container div {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    #container div div {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        background-color: black;
+        color: #ddd;
+    }
+
+    h1, h2, h3, h4 {
+        color: white;
+    }
+
+    nav {
+        background-color: rgba(20, 20, 20, 1);
+    }
+
+    nav a, footer a {
+        color: #ddd;
+    }
+
+    #container div {
+        background-color: #111;
+    }
+
+    #container div .invert {
+        filter: invert(1);
+    }
+
+    #container div .invert:hover {
+        filter: invert(1);
+    }
+
+    #tools a, #credits a, #colors a, #remember a {
+        color: white;
+        transition: 0.2s ease;
+    }
+
+    .light {
+        display: none;
+    }
+
+    .dark {
+        display: flex;
+    }
+
+    #starting #meme {
+        filter: brightness(0.85);
+    }
+}
+
+@media (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    header h1:hover {
+        font-size: 2.25rem;
+        background: -webkit-linear-gradient(#017dde, #fe1ef1);
+        -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+        transition: 0.35s ease;
+    }
+
+    section h2:hover {
+        font-size: 2rem;
+        background: -webkit-linear-gradient(#017dde, #fe1ef1);
+        -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+        transition: 0.2s ease;
+    }
+
+    #container div img:hover {
+        scale: 1.15;
+        filter: brightness(1.3);
+        transition: 0.35s ease;
+    }
+
+    #container div h3:hover {
+        font-size: 1.75rem;
+        transition: 0.35s ease;
+    }
+
+    #starting img:hover, #colors img:hover, #remember img:hover, #time img:hover {
+        scale: 1.05;
+        transition: 0.35s ease;
+    }
+}

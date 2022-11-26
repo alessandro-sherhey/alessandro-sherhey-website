@@ -33,6 +33,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     flex-grow: 1;
+    flex-wrap: wrap;
 
     height: 50px;
     width: 100%;
@@ -50,6 +51,11 @@ nav a {
     color: black;
     text-decoration: none;
     transition: 0.2s ease;
+    padding: 0 20px;
+}
+
+nav .active {
+    font-weight: bold;
 }
 
 nav .click:hover {
@@ -435,6 +441,13 @@ footer a:active {
     }
 }
 
+
+@media only screen and (max-width: 1006px) {
+    nav .hide2 {
+        display: none;
+    }
+}
+
 /* Knowledge and BTS divs get stacked vertically instead of horizontally */
 
 @media only screen and (max-width: 1000px) {
@@ -520,6 +533,19 @@ footer a:active {
     }
 }
 
+@media only screen and (max-width: 632px) {
+    nav {
+        height: 100px;
+        padding: 20px auto;
+        position: static;
+        margin: 0;
+    }
+
+    #profile {
+        margin-top: 0;
+    }
+}
+
 @media only screen and (max-width: 500px) {
     .onlydesktop {
         display: none;
@@ -539,10 +565,10 @@ footer a:active {
         width: 90%;
     }
 
-    nav {
+/*    nav {
         display: none;
     }
-
+*/
     #profile {
         margin-top: 0;
     }
@@ -574,6 +600,7 @@ footer a:active {
     #profile {
         background-image: url(assets/background_dark.png);
     }
+
     nav {
         background-color: rgba(20, 20, 20, 1);
     }
