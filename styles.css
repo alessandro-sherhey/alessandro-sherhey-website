@@ -1,12 +1,14 @@
-/* General Rules */
+/* General Rules (universal rules and text size) */
 * {
     font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Montserrat', system-ui;
 }
 
-
 html {
-    /* background-image: linear-gradient(to bottom right, #12c2e9, #c471ed, #f64f59); */
     background-color: #eee;
+}
+
+body {
+    margin: 0;
 }
 
 h1 {
@@ -27,7 +29,6 @@ p, a {
 
 
 /* Navbar Rules */
-
 nav {
     display: flex;
     justify-content: space-around;
@@ -35,7 +36,7 @@ nav {
     flex-grow: 1;
     flex-wrap: wrap;
 
-    height: 50px;
+    height: fit-content;
     width: 100%;
     
     position: fixed;
@@ -51,19 +52,19 @@ nav a {
     color: black;
     text-decoration: none;
     transition: 0.2s ease;
-    padding: 0 20px;
+    padding: 13px 20px;
 }
 
-nav .active {
+nav a.active {
     font-weight: bold;
 }
 
-nav .click:hover {
+nav a.click:hover {
     text-decoration: underline;
     cursor: pointer;
 }
 
-nav .click:active {
+nav a.click:active {
     color: #017dde;
 }
 
@@ -74,21 +75,22 @@ nav .special {
 nav .special:hover {
     background: -webkit-linear-gradient(#017dde, #fe1ef1);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: 0.2s ease;
 }
 
 nav span {
     background-color: red;
+    color: white;
     padding: 2px 5px;
     margin: 0 5px;
     border-radius: 5px;
     z-index: 2;
 }
 
-/* Profile Rules */
-
-#profile {
+/* Header Rules */
+header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -105,26 +107,25 @@ nav span {
 
 }
 
-#profile h1 {
+header h1 {
     color: white;
     font-size: 4rem;
     text-shadow: 2px 2px rgba(255, 255, 255, 0.4);
     transition: 0.5s ease;
 }
 
-#profile h1:hover {
+header h1:hover {
     font-size: 4.5rem;
     transition: 0.5s ease;
 }
 
-#profile p {
+header p {
     color: rgba(255, 255, 255, 0.5);
     font-size: 1.5rem;
     transition: 0.3s ease;
 }
 
 /* About Rules */
-
 #about {
     margin: 60px 30px;
     text-align: center;
@@ -135,10 +136,22 @@ nav span {
     transition: 0.35s ease;
 }
 
+#about a {
+    color: black;
+    transition: 0.2s ease;
+}
 
+#about a:hover {
+    color: #017dde;
+    transition: 0.2s ease;
+}
+
+#about a:active {
+    color: #fe1ef1;
+    transition: 0.2s ease;
+}
 
 /* Knowledge Rules */
-
 #knowledge {
     transition: 0.35s ease;
     text-align: center;
@@ -149,42 +162,40 @@ nav span {
     transition: 0.35s ease;
 }
 
-#kcontainer {
+#kcont, #kcont2 {
     display: flex;
+    margin: 35px auto;
 }
 
-#kcontainer div {
+#kcont div, #kcont2 div {
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 5px 15px;
 }
 
-#kcontainer img {
+#kcont img, #kcont2 img {
     scale: 0.8;
     opacity: 0.7;
     transition: 0.35s ease;
+    padding: 10px;
 }
 
-#kcontainer img:hover {
+#kcont img:hover, #kcont2 img:hover {
     scale: 1;
     opacity: 1;
     transition: 0.35s ease;
 }
 
-#kcontainer div {
-    display: inline-flex;
-    margin: 5px 15px;
-}
-
 #knowledge div p {
-    padding: 0 20px;
+    padding: 0 10px;
     margin: 0;
 }
 
-
 /* Projects */
-
 #projects {
-    margin-left: 30px;
+    margin: 60px 30px;
     transition: 0.35s ease;
     text-align: center;
 }
@@ -192,8 +203,6 @@ nav span {
 #projects h2 {
     transition: 0.35s ease;
 }
-
-
 
 #projects img {
     width: 300px;
@@ -207,16 +216,16 @@ nav span {
     scale: 1.075;
 }
 
-#pcontainer, #pcontainer div {
+#pcont, #pcont div {
     display: flex;
 }
 
-#pcontainer {
+#pcont {
     justify-content: space-around;
     align-items: center;
 }
 
-#pcontainer div {
+#pcont div {
     background-color: rgba(255, 255, 255, 0.7);
     padding: 2px 5px;
     margin: 10px 10px 10px 0;
@@ -228,13 +237,13 @@ nav span {
     justify-content: center;
 }
 
-#pcontainer div div {
+#pcont div div {
     display: flex;
     flex-direction: column;
     background-color: transparent;
 }
 
-#pcontainer div div h3 {
+#pcont div div h3 {
     transition: 0.2s ease;
 }
 
@@ -254,9 +263,8 @@ nav span {
 }
 
 /* Contact */
-
 #contact {
-    margin-left: 30px;
+    margin: 60px 30px;
     text-align: center;
 }
 
@@ -264,14 +272,14 @@ nav span {
     transition: 0.35s ease;
 }
 
-#ccontainer {
+#ccont {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     flex-grow: 1;
 }
 
-#ccontainer img {
+#ccont img {
     width: auto;
     height: auto;
     scale: 0.5;
@@ -279,7 +287,7 @@ nav span {
     transition: 0.35s ease;
 }
 
-#ccontainer div {
+#ccont div {
     display: flex;
     flex-direction: row;
     margin: 0 30px;
@@ -288,33 +296,31 @@ nav span {
     align-items: center;
 }
 
-#ccontainer div p {
-    padding-left: 20px;
+#ccont div p {
     width: 100%;
 }
 
-#ccontainer div a {
+#ccont div a {
     color: black;
     transition: 0.2s ease;
 }
 
-#ccontainer div a:hover {
+#ccont div a:hover {
     color: #017dde;
     transition: 0.2s ease;
 }
 
-#ccontainer div a:active {
+#ccont div a:active {
     color: #fe1ef1;
     transition: 0.2s ease;
 }
 
-.onlymobile {
+.onlymobile { /* gets hidden since display width is high */
     display: none;
 }
 
 
-/* Behind The Scenes */
-
+/* Behind The Scenes Rules*/
 #bts {
     display: flex;
     flex-direction: column;
@@ -341,6 +347,7 @@ nav span {
 #bts img {
     width: 50%;
     max-width: 750px;
+    min-width: 400px;
     margin: 0 20px;
     border-radius: 20px;
     transition: 0.35s ease;
@@ -361,11 +368,11 @@ nav span {
     transition: 0.2s ease;
 }
 
-/* Footer */
+/* Footer Rules */
 footer {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 30px;
+    margin: 30px 5px 5px 5px;
 }
 
 footer p {
@@ -398,41 +405,40 @@ footer a:active {
 
 
 /* Media queries for website responsiveness */
-
-
+/* Knowledge container changes direction to column */
 @media only screen and (max-width: 1400px) {
-    #pcontainer {
+    #pcont {
         width: 100%;
         align-self: center;
     }
 
-    #pcontainer div{
+    #pcont div{
         flex-wrap: wrap;
         width: 400px;
     }
-}
 
-/* Project divs get stacked vertically instead of horizontally */
-
-@media only screen and (max-width: 950px) {
-    #pcontainer {
-        margin-right: 0;
+    #kcont, #kcont2 {
         flex-direction: column;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 
-    #pcontainer, #pcontainer div {
-        align-items: center;
+    #kcont div, #kcont2 div {
+        margin-left: 0;
+    }
+
+    #kcont div img, #kcont2 div {
+        margin: 0 20px;
     }
 }
 
 /* Small UI fixes for contact container when stacked vertically */
-
 @media only screen and (max-width: 1250px) {
-    #ccontainer {
+    #ccont {
         margin: 0;
     }
 
-    #ccontainer div {
+    #ccont div {
         width: 100%;
     }
 
@@ -441,36 +447,26 @@ footer a:active {
     }
 }
 
+/* Project divs get stacked vertically instead of horizontally */
+@media only screen and (max-width: 950px) {
+    #pcont {
+        margin-right: 0;
+        flex-direction: column;
+    }
 
-@media only screen and (max-width: 1006px) {
-    nav .hide2 {
-        display: none;
+    #pcont, #pcont div {
+        align-items: center;
     }
 }
 
 /* Knowledge and BTS divs get stacked vertically instead of horizontally */
-
 @media only screen and (max-width: 1000px) {
-
-    #kcontainer {
-        flex-direction: column;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-
-    #kcontainer div {
-        margin-left: 0;
-    }
-
-    #kcontainer div img {
-        margin: 0 20px;
-    }
-    #ccontainer {
+    #ccont {
         flex-direction: column;
         width: 100%;
     }
 
-    #ccontainer div p {
+    #ccont div p {
         padding-right: 50px;
     }
 
@@ -484,14 +480,13 @@ footer a:active {
 }
 
 /* Margins reduced to waste less space */
-
 @media only screen and (max-width: 750px) {
     #about {
         margin-left: 20px;
         margin-right: 20px;
     }
 
-    #kcontainer {
+    #kcont, #kcont2 {
         margin-left: 0;
         margin-right: 0;
     }
@@ -501,7 +496,7 @@ footer a:active {
         margin-right: 20px;
     }
 
-    #ccontainer div {
+    #ccont div {
         margin-left: 0;
     }
 
@@ -522,30 +517,21 @@ footer a:active {
         width: 95%;
     }
 
-    nav .hide2 {
-        display: none;
-    }
 }
 
-@media only screen and (max-width: 600px) {
-    #profile {
-        background-size: cover;
-    }
-}
-
-@media only screen and (max-width: 632px) {
+/* Navbar becomes static */
+@media only screen and (max-width: 700px) {
     nav {
-        height: 100px;
-        padding: 20px auto;
         position: static;
         margin: 0;
     }
 
-    #profile {
+    header {
         margin-top: 0;
     }
 }
 
+/* Email contact text gets changed to fit display */
 @media only screen and (max-width: 500px) {
     .onlydesktop {
         display: none;
@@ -556,37 +542,34 @@ footer a:active {
     }
 }
 
+/* Containers increase their width to waste less space */
 @media only screen and (max-width: 450px) {
-    #pcontainer div {
+    #pcont div {
         width: 90%;
     }
 
-    #pcontainer img {
+    #pcont img {
         width: 90%;
     }
 
-/*    nav {
-        display: none;
-    }
-*/
-    #profile {
+    header {
         margin-top: 0;
     }
 } 
 
+/* Header text becomes smaller for really small devices (iPhone SE 1st gen and Apple Watches?) */
 @media only screen and (max-width: 375px) {
-    #profile h1 {
+    header h1 {
         font-size: 3.25rem;
     }
 
-    #profile h1:hover {
+    header h1:hover {
         font-size: 3.25rem;
     }
 }
 
 
-/* Dark Mode */
-
+/* Dark Mode  Rules */
 @media (prefers-color-scheme: dark) {
     html {
         background-color: black;
@@ -597,29 +580,32 @@ footer a:active {
         color: white;
     }
 
-    #profile {
+    header {
         background-image: url(assets/background_dark.png);
+    }
+
+    #about a {
+        color: #ddd;
     }
 
     nav {
         background-color: rgba(20, 20, 20, 1);
     }
     
-    #ccontainer img {
+    .invert {
         filter: invert(1);
     }
 
-    #kcontainer img {
+    .bg {
         background-color: #333;
-        padding: 10px;
         border-radius: 5px;
     }
 
-    #pcontainer div {
+    #pcont div {
         background-color: rgba(20, 20, 20, 0.7);
     }
 
-    #pcontainer div div h3:hover {
+    #pcont div div h3:hover {
         color: white;
     }
 
@@ -627,16 +613,14 @@ footer a:active {
         box-shadow: 0px 5px rgba(50, 50, 50, 0.7);
     }
 
-    nav a, #projects a, #ccontainer div a, #bts div a, footer a {
+    nav a, #projects a, #ccont div a, #bts div a, footer a {
         color: #ddd;
     }
 }
 
-/* Enables almost all hover animations for pointer users */
-
-@media (pointer: fine) and (prefers-reduced-motion: no-preference) {
-
-    #profile p:hover {
+/* Enables almost all hover animations for those who didn't enable the 'Reduce Motion' option on their devices */
+@media (prefers-reduced-motion: no-preference) {
+    header p:hover {
         color: rgba(255, 255, 255, 1);
         transition: 0.3s ease;
     }
@@ -645,6 +629,7 @@ footer a:active {
         font-size: 2.25rem;
         background: -webkit-linear-gradient(#017dde, #fe1ef1);
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         transition: 0.35s ease;
     }
@@ -653,6 +638,7 @@ footer a:active {
         font-size: 2.25rem;
         background: -webkit-linear-gradient(#017dde, #fe1ef1);
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         transition: 0.35s ease;
     }
@@ -661,11 +647,12 @@ footer a:active {
         font-size: 2.25rem;
         background: -webkit-linear-gradient(#017dde, #fe1ef1);
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         transition: 0.35s ease;
     }
 
-    #pcontainer div div h3:hover {
+    #pcont div div h3:hover {
         font-size: 1.75rem;
     }
 
@@ -673,11 +660,12 @@ footer a:active {
         font-size: 2.25rem;
         background: -webkit-linear-gradient(#017dde, #fe1ef1);
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         transition: 0.35s ease;
     }
 
-    #ccontainer img:hover {
+    #ccont img:hover {
         scale: 0.7;
         opacity: 1;
         transition: 0.35s ease;
@@ -687,6 +675,7 @@ footer a:active {
         font-size: 2.25rem;
         background: -webkit-linear-gradient(#017dde, #fe1ef1);
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         transition: 0.35s ease;
     }
@@ -695,11 +684,5 @@ footer a:active {
         scale: 1.025;
         transition: 0.35s ease;
         box-shadow: none;
-    }
-}
-
-@media (inverted-colors: inverted) {
-    #kcontainer img, #pcontainer img {
-        filter: invert(1);
     }
 }

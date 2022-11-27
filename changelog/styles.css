@@ -1,12 +1,15 @@
-/* General Rules */
+/* General Rules (universal rules and text size) */
 * {
     font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Montserrat', system-ui;
 }
 
 
 html {
-    /* background-image: linear-gradient(to bottom right, #12c2e9, #c471ed, #f64f59); */
     background-color: #eee;
+}
+
+body {
+    margin: 0;
 }
 
 h1 {
@@ -25,10 +28,7 @@ p, a {
     font-size: 1.2rem;
 }
 
-
-
 /* Navbar Rules */
-
 nav {
     display: flex;
     justify-content: space-around;
@@ -36,7 +36,7 @@ nav {
     flex-grow: 1;
     flex-wrap: wrap;
 
-    height: 50px;
+    height: fit-content;
     width: 100%;
     
     position: fixed;
@@ -52,7 +52,7 @@ nav a {
     color: black;
     text-decoration: none;
     transition: 0.2s ease;
-    padding: 0 20px;
+    padding: 13px 20px;
 }
 
 nav .active {
@@ -75,6 +75,7 @@ nav .special {
 nav .special:hover {
     background: -webkit-linear-gradient(#017dde, #fe1ef1);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: 0.2s ease;
 }
@@ -101,6 +102,7 @@ header p {
     opacity: 0.8;
 }
 
+/* Section Rules */
 section {
     display: flex;
     flex-direction: row;
@@ -155,11 +157,11 @@ section .version h4:hover {
     transition: ease 0.25s;
 }
 
-/* Footer */
+/* Footer Rules */
 footer {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 30px;
+    margin: 30px 5px 5px 5px;
 }
 
 footer p {
@@ -190,6 +192,7 @@ footer a:active {
     transition: 0.2s ease;
 }
 
+/* Media queries for website responsiveness */
 @media only screen and (max-width: 1250px) {
     nav .hide {
         display: none;
@@ -214,16 +217,15 @@ footer a:active {
     }
 }
 
-@media only screen and (max-width: 632px) {
+/* Navbar becomes static */
+@media only screen and (max-width: 700px) {
     nav {
-        height: 100px;
-        padding: 20px auto;
         position: static;
         margin: 0;
     }
 
     header {
-        margin-top: 40px;
+        margin-top: 0;
     }
 }
 
@@ -246,6 +248,7 @@ footer a:active {
     }
 }
 
+/* Dark Mode */
 @media (prefers-color-scheme: dark) {
     html {
         background-color: black;
@@ -277,11 +280,13 @@ footer a:active {
     }
 }
 
-@media (pointer: fine) and (prefers-reduced-motion: no-preference) {
+/* Enables almost all hover animations for those who didn't enable the 'Reduce Motion' option on their devices */
+@media (prefers-reduced-motion: no-preference) {
     header h1:hover {
         font-size: 2.25rem;
         background: -webkit-linear-gradient(#017dde, #fe1ef1);
         -webkit-background-clip: text;
+        background-clip: text;
        -webkit-text-fill-color: transparent;
         transition: 0.35s ease;
     }
@@ -290,6 +295,7 @@ footer a:active {
         font-size: 2rem;
         background: -webkit-linear-gradient(#017dde, #fe1ef1);
         -webkit-background-clip: text;
+        background-clip: text;
        -webkit-text-fill-color: transparent;
         transition: 0.2s ease;
     }

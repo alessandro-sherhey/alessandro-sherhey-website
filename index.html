@@ -7,149 +7,211 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Import code for "Inter" font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Import code for "Montserrat" font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!--
-    <nav>
-        <a href="#body" class="hide2 special">Alessandro Sherhey Website <span>BETA</span></a>
-        <a href="#about" class="hide click">About Me</a>
-        <a href="#knowledge" class="click">My Knowledge</a>
-        <a href="#projects" class="click">My Projects</a>
-        <a href="#bts" class="hide click">How I made this Website</a>
-        <a href="#contact" class="click">Contact Me</a>
-    </nav> -->
+
+    <!-- 
+        Explanation for every class:
+        "hide" means that the element will be hidden when the display is below a certain size
+        "special" means that the text will be colored when hovering
+        "active" is the page you're currently in, which makes the text bold
+        "click" means that the text is clickable
+    -->
 
     <nav>
-        <a href="#body" class="hide2 special">Alessandro Sherhey Website <span>BETA</span></a>
+        <a href="#body" class="hide special">Alessandro Sherhey Website <span>BETA</span></a>
         <a href="/index.html" class="click active">Home</a>
         <a href="changelog/changelog.html" class="click">Changelogs</a>
         <a href="behindthescenes/bts.html" class="click">Behind the Scenes</a>
         <a href="https://github.com/alessandro-sherhey/alessandro-sherhey-website" class="click">GitHub Repository</a>
     </nav>
-    
+
     <main>
 
-        <section id="profile">
-                <h1>Alessandro Sherhey</h1>
-                <p title="not really but whatever"><em>(becoming a) </em>Web Developer</p>
-        </section>
+        <header>
+            <h1>Alessandro Sherhey</h1>
+            <p>becoming a <strong>web developer</strong>...</p>
+        </header>
 
         <section id="about">
             <h2>🙋🏻‍♂️ About Me</h2>
             <p>
-                Hi, I am Alessandro Sherhey. I'm a 14 year old Italian boy born in Siracusa, Sicily. I currently live
-                in the Friuli Venezia Giulia region, which is in Italy. From when I was a kid I had a big passion for
-                coding,
-                and now I also have a second one: 3D printing, but I'm here because of coding :) <br>I made this website not only to practice my HTML and CSS
-                skills,
-                but also to share my projects with other people like you!
+                Hi, I am Alessandro Sherhey. I'm a 14 year old Italian boy born in Siracusa, Sicily. From when I was a
+                kid I had a big passion for coding. Everything started with 
+                <a href="https://www.code.org/">code.org</a> 
+                when I was in elementary school. Then in middle school I found 
+                <a href="https://www.scratch.mit.edu/">Scratch</a>.
+                That was a game changer for me. I even made my first game with it! And now, I'm here, writing
+                <strong>real code</strong> for websites. And that's not all. I'm planning to learn 
+                <strong>iOS development</strong> after I finish learning how to make websites!
             </p>
         </section>
 
         <section id="knowledge">
+            <!-- "invert" means that the image will be inverted in dark mode -->
             <h2>🧠 My Knowledge</h2>
-            <div id="kcontainer">
+            <div id="kcont"> <!-- "knowledge container" -->
                 <div>
-                    <img src="assets/html_logo.png" height="60px" width="60px" />
-                    <p>I know the HyperText Markup Language pretty well. It's the first programming language I started learning.</p>
-                </div>
-                <div>
-                    <img src="assets/css_logo.png" height="60px" width="60px" />
-                    <p>I know the Cascading StyleSheet language well too. Not as much as HTML, but I know how to use more advanced things
-                        like the Flexbox.
+                    <img src="assets/html_logo.png" height="60px" width="60px" class="bg"/>
+                    <p>
+                        I know the HTML programming language pretty well. It's the first programming language I started
+                        learning, after block-based programming of course.
                     </p>
                 </div>
                 <div>
-                    <img src="assets/js_logo.png" height="60px" width="60px" />
-                    <p>Now I'm learning how to use JavaScript, to make my website interactive. In other words: <strong>even better</strong>.</p>
+                    <img src="assets/css_logo.png" height="60px" width="60px" class="bg"/>
+                    <p>
+                        I know the Cascading StyleSheet language well too. Not as much as HTML, but I know how to use
+                        more advanced things like Flexbox, which will be <strong>vastly</strong> used in this website.
+                    </p>
+                </div>
+                <div>
+                    <img src="assets/js_logo.png" height="60px" width="60px" class="bg"/>
+                    <p>
+                        Now I'm learning how to use JavaScript, to make my websites interactive. In other words:
+                        <strong>even better</strong>.
+                    </p>
+                </div>
+            </div>
+            <div id="kcont2">
+                <div>
+                    <img src="assets/compactcamera_icon.png" height="60px" width="60px" class="invert"/>
+                    <p>
+                        I know how to shoot good photos with my DSLR camera. I'm not a professional, but I'm not a
+                        rookie either.
+                    </p>
+                </div>
+                <div>
+                    <img src="assets/video_icon.png" height="60px" width="60px" class="invert"/>
+                    <p>
+                        I have some knowledge on video editing. The programs I've used are iMovie, VITA and Windows
+                        Video Editor (the one integrated in the Photos app).
+                    </p>
+                </div>
+                <div>
+                    <img src="assets/3dprinter_icon.png" height="60px" width="60px" class="invert"/>
+                    <p>
+                        I started 3D printing almost 2 years ago. I just love it. I have a Creality Ender 3 and I learned
+                        to use it pretty well. With 3D printing I also learned how to use Cura in every single aspect and
+                        the fundamentals of Autodesk Fusion 360.
+                    </p>
                 </div>
             </div>
         </section>
 
         <section id="projects">
             <h2>🛠️ Projects</h2>
-            <p>Right now I don't have any real projects under development. Instead here I'll show you some dummy websites I made. 
-                I made those dummy websites for the "Full-Stack Developer" course in the <a href="https://www.codecademy.com">
-                    Codecademy</a> website. You can click the images to access the websites.
-                </p>
-            <div id="pcontainer">
+            <p>Right now I <strong>don't</strong> have any real projects under development. Instead here I'll show you
+                some dummy websites I made.
+                I made those dummy websites for the "Full-Stack Developer" course in the <a
+                    href="https://www.codecademy.com">
+                    Codecademy</a> website. <strong>Click the images to access the websites</strong>.
+            </p>
+            <div id="pcont"> <!-- "projects container" -->
                 <div>
                     <a href="https://alessandro-sherhey.github.io/teacozy/"><img src="assets/tea_cozy.png"></a>
                     <div>
                         <h3>Tea Cozy</h3>
-                        <p>This website is about to a fictional tea business. It's the <strong>first website</strong> I made during the course.</p>
+                        <p>This website is about a fictional tea business. It's the <strong>first website</strong> I
+                            made during the course.</p>
                     </div>
                 </div>
                 <div>
-                    <a href="https://alessandro-sherhey.github.io/southvillage-runclub/"><img src="assets/southvillage_runclub.png"></a>
+                    <a href="https://alessandro-sherhey.github.io/southvillage-runclub/"><img
+                            src="assets/southvillage_runclub.png"></a>
                     <div>
                         <h3>South Village Run Club</h3>
-                        <p>This the second website I've made. It talks about a running club, that doesn't actually exist. However, this wasn't entirely
-                            original. The idea was taken from Codecademy's example, and I made the design <strong>better and responsive.</strong></p>
+                        <p>This the second website I've made. It talks about a running club, that doesn't actually
+                            exist. However, this wasn't entirely
+                            original. The idea was taken from Codecademy's example, and I made the design <strong>better
+                                and responsive.</strong></p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="bts">
+        <section id="bts"> <!-- "behind the scenes" -->
             <h2>💻 How I made this website</h2>
             <div>
                 <img src="assets/bts.png">
-                <p>I made this website entirely on original ideas. I used <a href="https://code.visualstudio.com">Visual Studio Code</a> as my code editor,
+                <p>I made an entire page about how I made the website and what I used. You can find it in the "Behind the 
+                    Scenes" button in the navbar. Anyways, here's a small recap:<br><br>
+                    I used <a href="https://code.visualstudio.com">Visual Studio Code</a> as my code editor,
                     and I took the icons from a website called <a href="https://www.icons8.com/">icons8</a>. Feel
-                    free to take a look there, it's a great website with lots of free icons. <br><br>The image on the left is a screenshot
-                    of me programming the website, while it wasn't even completed yet. This website took a few weeks to make. The initial version was different
-                    from the final one. <br><br>I tried to make the best design possible while not making it too complicated, and I think I succeded at this task! I hope
-                    you like this website as much as me, but, if you want to give me some suggestions or report a bug, contact me or write an issue on this 
-                    website's <a href="https://github.com/alessandro-sherhey/alessandro-sherhey-website">GitHub repository</a>.<!---
-                    If you want to see some more BTS images you can go to the GitHub repository of this website
-                    and download them from here:  (you found an incoming feature) -->
+                    free to take a look there, it's a great website with lots of icons. To use them for free you just need to 
+                    insert a link in your website. <br><br>The image on the
+                    left is a screenshot
+                    of me programming the website, while it wasn't even completed yet. This website took a few weeks to
+                    make. The initial version was different
+                    from the final one. <br><br>I tried to make the best design possible while not making it too
+                    complicated, and I think I succeded at this task! I hope
+                    you like this website as much as me, but, if you want to give me some suggestions or report a bug,
+                    contact me or write an issue on this
+                    website's <a href="https://github.com/alessandro-sherhey/alessandro-sherhey-website">GitHub
+                        repository</a>.
                 </p>
             </div>
         </section>
 
         <section id="contact">
+            <!-- 
+                "onlydesktop" means that the text will be shown only on screens with an high width
+                "onlymobile" means the opposite (screens with a low width)
+            -->
             <h2>📞 Contact</h2>
-            <div id="ccontainer">
+            <div id="ccont"> <!-- "contact container" -->
                 <div>
-                    <img src="assets/mail_icon.png" height="60px" width="60px" />
-                    <p class="onlydesktop">You can write me an email to this address: <a href="mailto:sherheyalessandro@gmail.com">
-                        sherheyalessandro@gmail.com</a>.</p>
+                    <img src="assets/mail_icon.png" height="60px" width="60px" class="invert"/>
+                    <p class="onlydesktop">You can write me an email to this address: <a
+                            href="mailto:sherheyalessandro@gmail.com">
+                            sherheyalessandro@gmail.com</a>.</p>
                     <p class="onlymobile">Click <a href="mailto:sherheyalessandro@gmail.com">here</a> to send me
-                    an email.</p>
+                        an email.</p>
                 </div>
                 <div>
-                    <img src="assets/instagram_icon.png" height="60px" width="60px" />
+                    <img src="assets/instagram_icon.png" height="60px" width="60px" class="invert"/>
                     <p>If you don't want to send an email you can always DM me on <a
                             href="https://instagram.com/al3ss4ndro_s?igshid=YmMyMTA2M2Y=" target="_blank">
                             Instagram</a>. Handle: @al3ss4ndro_s</p>
                 </div>
             </div>
         </section>
-         
-        
+
     </main>
 
     <footer>
-        <p>Alessandro Sherhey Website <strong>beta v0.5</strong></p>
+        <!-- "reducedopacity" means that the text will be more transparent -->
+        <p>Alessandro Sherhey Website <strong>beta v0.6</strong></p>
         <p>Made with ❤️</p>
         <p><strong>©</strong> Alessandro Sherhey <strong>2022</strong></p>
-        <p class="reducedopacity">Thanks to <a href="https://www.codecademy.com">Codecademy</a> for giving me all the necessary skills to make this website.</p>
-        <p class="reducedopacity"><a target="_blank" href="https://icons8.com/icon/53435/mail">Mail</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
-        <p class="reducedopacity"><a target="_blank" href="https://icons8.com/icon/M486asakOqWV/instagram">Instagram</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
-        <p class="reducedopacity">This website is still in <strong>beta</strong>. That means that it couldn't work well under certian circumstances. You can 
-        find all the known issues and the changelogs in the <a href="https://github.com/alessandro-sherhey/alessandro-sherhey-website">GitHub repository</a>.</p>
-        <p class="reducedopacity"><a target="_blank" href="https://github.com/alessandro-sherhey/alessandro-sherhey-website/issues/new">Report an issue</a></p>
+        <p class="reducedopacity">Thanks to <a href="https://www.codecademy.com">Codecademy</a> for giving me all the
+            necessary skills to make this website.</p>
+        <p class="reducedopacity"><a target="_blank" href="https://icons8.com/icon/11481/fotocamera-compatta">Compact
+                Camera</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
+        <p class="reducedopacity"><a target="_blank" href="https://icons8.com/icon/w1hv_6ZXDvXC/laptop-play-video">Laptop Play Video</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
+        <p class="reducedopacity"><a target="_blank" href="https://icons8.com/icon/RqhX0YY3XUDz/3d-printer">3d Printer</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
+        <p class="reducedopacity"><a target="_blank" href="https://icons8.com/icon/53435/mail">Mail</a> icon by <a
+                target="_blank" href="https://icons8.com">Icons8</a></p>
+        <p class="reducedopacity"><a target="_blank" href="https://icons8.com/icon/M486asakOqWV/instagram">Instagram</a>
+            icon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
+        <p class="reducedopacity">This website is still in <strong>beta</strong>. That means that it couldn't work well
+            under certian circumstances. You can
+            find all the known issues and the changelogs in the <a
+                href="https://github.com/alessandro-sherhey/alessandro-sherhey-website">GitHub repository</a>.</p>
+        <p class="reducedopacity"><a target="_blank"
+                href="https://github.com/alessandro-sherhey/alessandro-sherhey-website/issues/new">Report an issue</a>
+        </p>
     </footer>
-    
+
 </body>
+
 </html>
