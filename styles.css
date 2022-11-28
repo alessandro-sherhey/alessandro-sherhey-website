@@ -188,8 +188,8 @@ header p {
     transition: 0.35s ease;
 }
 
-#knowledge div p {
-    padding: 0 10px;
+#knowledge div div p {
+    padding: 10px;
     margin: 0;
 }
 
