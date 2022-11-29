@@ -193,6 +193,14 @@ header p {
     margin: 0;
 }
 
+#kcont img.light {
+    display: block;
+}
+
+#kcont img.dark {
+    display: none;
+}
+
 /* Projects */
 #projects {
     margin: 60px 30px;
@@ -592,13 +600,16 @@ footer a:active {
         background-color: rgba(20, 20, 20, 1);
     }
     
-    .invert {
-        filter: invert(1);
+    #kcont img.light {
+        display: none;
     }
 
-    .bg {
-        background-color: #333;
-        border-radius: 5px;
+    #kcont img.dark {
+        display: block;
+    }
+
+    .invert {
+        filter: invert(1);
     }
 
     #pcont div {
