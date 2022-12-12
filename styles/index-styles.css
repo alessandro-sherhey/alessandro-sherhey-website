@@ -101,7 +101,7 @@ header {
     margin-top: 50px;
     height: 300px;
 
-    background-image: url(./assets/backgrounds/background-light.png);
+    background-image: url(../assets/backgrounds/background-light.png);
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -589,7 +589,7 @@ footer a:active {
     }
 
     header {
-        background-image: url(assets/backgrounds/background-dark.png);
+        background-image: url(../assets/backgrounds/background-dark.png);
     }
 
     #about a {
